@@ -37,9 +37,20 @@ class Item:
             #print(item)
             Item(
                 name=item.get('name'),
-                price=int(item.get('price')),
+                price=float(item.get('price')),
                 quantity=int(item.get('quantity'))
             )
+
+    @staticmethod
+    def is_integer(num):
+        # we will count out the floats that are point zero
+        if isinstance(num, float):
+            # count out the floats that are point zero
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
 
     # Magic method __repr__
     def __repr__(self):
@@ -48,5 +59,10 @@ class Item:
    
 
 
-Item.instantiate_from_csv()
-print(Item.all)
+print(Item.is_integer(7.5)) # 7, 7.0, 7.5
+
+"""
+1. We generally use the class method to create factory methods. Factory methods return class objects ( similar to a constructor ) for different use cases.
+2. We generally use static methods to create utility functions
+
+"""
