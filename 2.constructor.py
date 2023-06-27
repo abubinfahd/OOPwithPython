@@ -18,22 +18,20 @@ class Item:
     def calculate_total_price(self):
         return self.price * self.quantity
     def apply_discount(self):
-        self.price = self.price * Item.pay_rate
+        self.price = self.price * self.pay_rate
 
-# Create an instance of a class   
-item1 = Item('Phone', 10000, 5) # try negative numbner of price or quantity
-# Create second instance(one can create as much as want):
+   
+item1 = Item('Phone', 10000, 5) 
 item2 = Item('Laptop', 30000, 3)
 
 # print(Item.pay_rate)
 # print(item1.pay_rate)
 # print(item2.pay_rate)
 
-print(Item.__dict__) # All the attributes for class level
-print("\n")
-print(item1.__dict__) # All thye attributes for instance level
-
 item1.apply_discount()
 print(item1.price)
+item2.pay_rate=0.7
+item2.apply_discount
+print(item2.price)
 
 
