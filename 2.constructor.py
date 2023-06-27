@@ -1,7 +1,13 @@
 # Create class:
 class Item:
     # Constructor:
-    def __init__(self, name, price, quantity):
+    def __init__(self, name: str, price: float, quantity=0):
+
+        # Run validation to receive arguments
+        assert price >= 0
+        assert quantity >= 0
+
+        # Assign self object
         self.name = name
         self.price = price
         self.quantity = quantity
@@ -11,7 +17,7 @@ class Item:
         return self.price * self.quantity
 
 # Create an instance of a class   
-item1 = Item('Phone', 10000, 5)
+item1 = Item('Phone', 10000, 5) # try negative numbner of price or quantity
 # Create second instance(one can create as much as want):
 item2 = Item('Laptop', 30000, 3)
 
