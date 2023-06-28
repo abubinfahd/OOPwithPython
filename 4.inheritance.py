@@ -57,7 +57,6 @@ class Item:
         return f"{self.__class__.__name__}('{self.name}', '{self.price}', '{self.quantity}')"
 
 class Phone(Item):
-    all = []
     def __init__(self, name: str, price: float, quantity=0, broken_phones=0):
 
         # Call Super function
@@ -70,9 +69,7 @@ class Phone(Item):
 
         # Assign self object:
         self.broken_phones = broken_phones
-
-        # Action to execute
-        Phone.all.append(self)   
+   
 
 Phone1 = Phone("IPhone13", 100000, 5, 1)
 Phone2 = Phone("IPhone14", 150000, 5, 1)
