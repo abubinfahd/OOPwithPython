@@ -20,5 +20,5 @@ Phone1 = Phone("IPhone13", 100000, 5, 1)
 Phone2 = Phone("IPhone14", 150000, 5, 1)
 
 # print(Phone1.calculate_total_price())
-print(Item.all)
-print(Phone.all)
+# print(Item.all)
+# print(Phone.all)
