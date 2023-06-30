@@ -1,6 +1,7 @@
 from item import Item
 
-item1 = Item("MyItem", 750)
+item1 = Item("MyItem", 750, 6)
 
-item1.apply_increment(0.2)
-print(item1)
+item1.send_email()
+
+item1.__connect() # not accesible
